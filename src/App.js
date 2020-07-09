@@ -1,6 +1,7 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Counter from './molecules/counter';
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Counter />
+        <Counter />
         <a
           className='App-link'
           href='https://reactjs.org'
