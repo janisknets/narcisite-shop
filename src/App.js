@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Counter from './molecules/counter';
+import Palette from './molecules/palette';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         </p>
         <Counter />
         <Counter />
+        <Palette />
         <a
           className='App-link'
           href='https://reactjs.org'
