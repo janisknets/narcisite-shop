@@ -10,10 +10,8 @@ import Header  from './molecules/header';
 function App() {
   return (
     <div className='App'>
-          <ReactSearchBox />
-      <div className="Header">
-      <Header />
-      </div>
+          <ReactSearchBox />  
+          <Header />
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         

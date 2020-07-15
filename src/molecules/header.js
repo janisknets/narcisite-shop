@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Form, Button, Container } from 'react-bootstrap';
-import logot from './images/accessories.jpg';
+// import logot from './images/accessories.jpg';
 
 export default function Header () {
     return (
@@ -8,7 +8,7 @@ export default function Header () {
             <Container>
                 <Navbar.Brand href='/'>
                     <img
-                    src={logot}
+                    // src={logot}
                     height="70"
                     width="70"
                     className="d-inline-block align-right"
@@ -35,5 +35,3 @@ export default function Header () {
         </Navbar>
     )
     }
-
-
