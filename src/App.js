@@ -3,18 +3,27 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './molecules/counter';
 import Palette from './molecules/palette';
+import ReactSearchBox from './molecules/navbar';
+import Header  from './molecules/header';
+
 
 function App() {
   return (
     <div className='App'>
+          <ReactSearchBox />
+      <div className="Header">
+      <Header />
+      </div>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
+        
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <Counter />
         <Counter />
         <Palette />
+        
         <a
           className='App-link'
           href='https://reactjs.org'
