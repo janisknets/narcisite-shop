@@ -1,11 +1,12 @@
 import React from 'react';
+import Greetings from '../molecules/Greetings';
 
-function HomePage () {
+function HomePage() {
   return (
     <div>
-      Hello I am a home page;
+      <Greetings />
     </div>
-  )
-} 
+  );
+}
 
 export default HomePage;
