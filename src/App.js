@@ -1,30 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import './App.css';
-import Counter from './molecules/counter';
-import Palette from './molecules/palette';
+import HomePage from './pages/homePage';
+import ProductsPage from './pages/productsPage';
+import ClockPage from './pages/clockPage';
+import Navigation from './molecules/navigation';
+
 
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Counter />
-        <Counter />
-        <Palette />
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-        <p>Pleaaaase work</p>
-      </header>
+      <Router >
+        <Navigation />
+        <Switch>
+          <Route path="/products" >
+            <ProductsPage />
+          </Route>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/clock">
+            <ClockPage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
