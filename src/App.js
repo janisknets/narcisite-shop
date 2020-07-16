@@ -7,6 +7,7 @@ import {
 import './App.css';
 import HomePage from './pages/homePage';
 import ProductsPage from './pages/productsPage';
+import ClockPage from './pages/clockPage';
 import Navigation from './molecules/navigation';
 
 
@@ -19,8 +20,11 @@ function App() {
           <Route path="/products" >
             <ProductsPage />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <HomePage />
+          </Route>
+          <Route path="/clock">
+            <ClockPage />
           </Route>
         </Switch>
       </Router>
