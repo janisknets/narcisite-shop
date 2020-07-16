@@ -16,7 +16,7 @@ import logot from '../logo.svg';
                     alt="logo" 
                     />
                 </Navbar.Brand>
-                {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                     <Link to="/" >Home</Link>
