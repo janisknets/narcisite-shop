@@ -19,9 +19,9 @@ import logot from '../logo.svg';
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Link to="/" id="nav">Home</Link>
-                    <Link to="/products" id="nav">Products</Link>
-                    <Link to="/profile" id="nav">My Profile</Link>
+                    <Link to="/" id="nb">Home</Link>
+                    <Link to="/products" id="nb">Products</Link>
+                    <Link to="/profile" id="nb">My Profile</Link>
                 </Nav>
                 <Form inline>
                   <FormControl type="text" placeholder="Search" className="mr-sm-2" />
