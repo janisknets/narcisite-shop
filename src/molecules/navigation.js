@@ -6,7 +6,7 @@ import logot from '../logo.svg';
  function Navigation () {
     return (
       <>
-        <Navbar collapseOnSelect expand="md" bg="primary" variant="dark">
+        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
                 <Navbar.Brand href='/'>
                     <img
                     src={logot}
@@ -19,8 +19,9 @@ import logot from '../logo.svg';
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Link to="/" >Home</Link>
-                    <Link to="/products" >Products</Link>
+                    <Link to="/" id="nav">Home</Link>
+                    <Link to="/products" id="nav">Products</Link>
+                    <Link to="/profile" id="nav">My Profile</Link>
                 </Nav>
                 <Form inline>
                   <FormControl type="text" placeholder="Search" className="mr-sm-2" />
