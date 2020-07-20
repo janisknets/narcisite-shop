@@ -1,17 +1,17 @@
 import React from 'react';
 import Shirt from '../molecules/shirt';
 
-
-function AddingsPage () {
+function CustomizeTshirtPage () {
   return (
     <div>
-      Hello there you can choose T-shirt text color;
+      <h3>
+      Hello, there you can style your T-shirt
+      </h3>
       <div>
         <Shirt />
       </div>
-      
     </div>
   )
 } 
 
-export default AddingsPage;
+export default CustomizeTshirtPage;

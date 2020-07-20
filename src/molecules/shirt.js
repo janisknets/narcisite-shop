@@ -1,50 +1,76 @@
 import React, { useState } from 'react';
+import TshirtSvg from '../atoms/tshirtSvg';
 import PricedColourButton from '../atoms/pricedColourButton';
 
 function Shirt(props) {
 
-  const [color, setColor] = useState();
- 
-  const colours = [ 'Blue', 'Red', 'Pink', 'Green', 'Magenta', 'Turquoise'];
+  const colours = [ 'Lightgrey', 'Blue', 'Red', 'Green', 'Magenta', 'Turquoise']
+  const defaultText = "Put your text here"
 
- 
+  const [color, setColor] = useState(colours[0]);
+  const [tshirtText, setTshirtText] = useState(defaultText);
+  // const [summ, setSumm] = useSumm();
 
+  const handleTextChange = (e) => {
+    if ((e.target.value.length) === 0) {
+      setTshirtText(defaultText) 
+    } else {
+      setTshirtText(e.target.value)
+    }
+  }
+  
   return (
-    <>
       
     <div>
-        <svg width="300" height="200">
-          <polygon points="40,10 40,40 50,40 50,140 100,140 100,40 110,40 110,10"
-            style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
-        </svg>
-        <input type="text"></input>
-        <h1 style={{color}}>This is your T-shirt text and colour</h1>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+      <div>
+        <TshirtSvg color={color}/>
+      </div>
+      <h3 style={{color}}>This is your T-shirt colour</h3>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
         {
           colours.map(colour => 
-            <PricedColourButton text={colour + ' ' + colour.length + ' EUR'} style={{backgroundColor: colour.toLowerCase()}} clickEffect={() => setColor(colour.toLowerCase())} />
+            <PricedColourButton key={colour} text={colour + ' ' + colour.length + ' EUR'} style={{backgroundColor: colour.toLowerCase()}} clickEffect={() => setColor(colour.toLowerCase())} />
           )
         }
-        </div>
-        <br></br>
-        <h3>Please check your purchase</h3>
-        <div style={{justifyContent: 'center'}}>
-            <div>
-                <p>Product name: T-shirt</p>
-            </div>
-            <div>
-                <p>Product colour:</p>
-                <p>{color}</p>
-            </div>
-            {/* <div>
-                <p>Price:</p>
-                <p>{color.length}</p>
-            </div> */}
-        </div>
+      </div>
+      <br></br>
+      <h3>{tshirtText}</h3>
+  
+      <form>
+        <input
+          type="text"
+          name="textInput"
+          style={{ flex: '10', width: '50%', padding: '5px', margins: '15px' }}
+          placeholder="Your text here..."
+          onChange={handleTextChange} 
+        />
+       
+      </form>
+        
+      <br></br>
+
+      <h3>Please check your purchase</h3>
+      <div style={{justifyContent: 'center'}}>
+          <div>
+              <p>Product name: T-shirt</p>
+          </div>
+          <div style={{display: 'flex',justifyContent: 'center'}}>
+              <p>Product colour:</p>
+              <p>{color + color.length  + ' EUR'}</p>
+          </div>
+          <div style={{display: 'flex',justifyContent: 'center'}}>
+              <p>Text on t-shirt:</p>
+              <p>{tshirtText + tshirtText.length  + ' EUR'}</p>
+          </div>
+          <div style={{display: 'flex',justifyContent: 'center'}}>
+              <p>Total amount:</p>
+              <p>{ color.length  + tshirtText.length + ' EUR'}</p>
+          </div>
+      </div>
 
     </div>
       
-    </>
+    
   );
 }
 

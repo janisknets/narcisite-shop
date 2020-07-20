@@ -5,7 +5,7 @@ function Navigation () {
   return (
     <>
       <Link to="/" >Home </Link>
-      <Link to="/addings" >Addings </Link>
+      <Link to="/customizetshirt">Customize T-Shirt </Link>
       <Link to="/products">Products </Link>
     </>
   );
