@@ -13,7 +13,12 @@ function Shirt(props) {
     <>
       
     <div>
-        <h1 style={{color}}>This is your T-shirt text</h1>
+        <svg width="300" height="200">
+          <polygon points="40,10 40,40 50,40 50,140 100,140 100,40 110,40 110,10"
+            style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+        </svg>
+        <input type="text"></input>
+        <h1 style={{color}}>This is your T-shirt text and colour</h1>
         <div style={{display: 'flex', justifyContent: 'center'}}>
         {
           colours.map(colour => 
