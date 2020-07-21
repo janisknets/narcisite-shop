@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+#nb {
+  color: white;
+  text-indent: 50px;
+  text-transform: uppercase;
+}
+
+#userInfo {
+  color: gray;
+  text-align: justify;
+  
+}
