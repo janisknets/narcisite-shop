@@ -1,10 +1,8 @@
 import React from 'react';
 
-function Box(props) {
-  
-  
-    return (
-    <button style={props.style} onClick={() => {
+function PricedColourButton(props) {
+  return (
+    <button onClick={() => {
       if (props.clickEffect) {
         props.clickEffect();
         return;
@@ -14,4 +12,4 @@ function Box(props) {
   );
 }
 
-export default Box;
+export default PricedColourButton;
