@@ -7,7 +7,7 @@ import {
 import './App.css';
 import HomePage from './pages/homePage';
 import ProductsPage from './pages/productsPage';
-import AddingsPage from './pages/addingsPage';
+import CustomizeTshirtPage from './pages/customizeTshirtPage';
 import Navigation from './molecules/navigation';
 
 
@@ -20,8 +20,8 @@ function App() {
           <Route path="/products" >
             <ProductsPage />
           </Route>
-          <Route path="/addings" >
-            <AddingsPage />
+          <Route path="/customizeTshirt" >
+            <CustomizeTshirtPage />
           </Route>
           <Route path="/">
             <HomePage />
