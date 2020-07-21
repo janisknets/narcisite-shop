@@ -42,3 +42,9 @@
   text-indent: 50px;
   text-transform: uppercase;
 }
+
+#userInfo {
+  color: gray;
+  text-align: justify;
+  
+}
