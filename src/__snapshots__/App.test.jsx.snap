@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src={[Function]}
+    />
+    <p>
+      Edit
+      <code>
+        src/App.js
+      </code>
+      and save to reload.
+    </p>
+    <div>
+      0
+    </div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      +
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      -
+    </button>
+    <div>
+      0
+    </div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      +
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      -
+    </button>
+    <div>
+      <h1
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+      >
+        Look!!!! I am changing colors!!!!
+      </h1>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "blue",
+            }
+          }
+          type="button"
+        >
+          Blue
+        </button>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "red",
+            }
+          }
+          type="button"
+        >
+          Red
+        </button>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "pink",
+            }
+          }
+          type="button"
+        >
+          Pink
+        </button>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "green",
+            }
+          }
+          type="button"
+        >
+          Green
+        </button>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "magenta",
+            }
+          }
+          type="button"
+        >
+          Magenta
+        </button>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "white",
+            }
+          }
+          type="button"
+        >
+          White
+        </button>
+      </div>
+    </div>
+    <a
+      className="App-link"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn React
+    </a>
+  </header>
+</div>
+`;

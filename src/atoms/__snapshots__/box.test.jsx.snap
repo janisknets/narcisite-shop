@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box renders correctly 1`] = `
+<button
+  onClick={[Function]}
+  style={null}
+  type="button"
+>
+  Button
+</button>
+`;
