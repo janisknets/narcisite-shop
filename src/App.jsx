@@ -7,6 +7,7 @@ import {
 import './App.css';
 import HomePage from './pages/homePage';
 import ProductsPage from './pages/productsPage';
+import MoviesPage from './pages/moviesPage';
 import Navigation from './molecules/navigation';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         <Switch>
           <Route path="/products">
             <ProductsPage />
+          </Route>
+          <Route path="/movies">
+            <MoviesPage />
           </Route>
           <Route path="/">
             <HomePage />
