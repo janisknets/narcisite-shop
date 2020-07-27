@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import MovieCard from '../atoms/movieCard';
 
-function Counter() {
+function MoviesList({ search, year }) {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    fetch('http://www.omdbapi.com/?apikey=a96d8308&type=movie&r=json&s=beautiful')
+    fetch(`http://www.omdbapi.com/?apikey=a96d8308&r=json&s=${search}&y=${year}`)
       .then((res) => res.json())
       .then(
         (result) => {
           setIsLoaded(true);
-          console.log(result);
           setMovies(result.Search);
         },
         // Note: it's important to handle errors here
@@ -23,7 +23,7 @@ function Counter() {
           setError(err);
         },
       );
-  }, []);
+  }, [search, year]);
 
   if (error) {
     return (
@@ -44,9 +44,19 @@ function Counter() {
 
   return (
     <div>
-      { movies.map((movie) => <MovieCard key={movie.imdbID} movie={movie} />) }
+      { Array.isArray(movies) && movies.map((movie) => <MovieCard key={movie.imdbID} movie={movie} />) }
     </div>
   );
 }
 
-export default Counter;
+MoviesList.propTypes = {
+  search: PropTypes.string,
+  year: PropTypes.number,
+};
+
+MoviesList.defaultProps = {
+  search: null,
+  year: null,
+};
+
+export default MoviesList;
