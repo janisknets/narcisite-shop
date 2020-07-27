@@ -26,13 +26,13 @@ const MovieCard = (
 );
 
 MovieCard.propTypes = {
-  movie: {
+  movie: PropTypes.shape({
     Title: PropTypes.string,
     Poster: PropTypes.string,
     Year: PropTypes.string,
     imdbID: PropTypes.string,
     Type: PropTypes.string,
-  },
+  }),
 };
 
 MovieCard.defaultProps = {

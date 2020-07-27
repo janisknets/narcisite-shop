@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Button({ clickEffect, text}) {
+function Button({ clickEffect, text }) {
   return (
     <button
       type="button"
