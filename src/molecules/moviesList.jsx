@@ -8,21 +8,23 @@ function MoviesList({ search, year }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    fetch(`http://www.omdbapi.com/?apikey=a96d8308&r=json&s=${search}&y=${year}`)
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setMovies(result.Search);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (err) => {
-          setIsLoaded(true);
-          setError(err);
-        },
-      );
+    if (search !== null) {
+      fetch(`http://www.omdbapi.com/?apikey=a96d8308&r=json&s=${search}&y=${year}`)
+        .then((res) => res.json())
+        .then(
+          (result) => {
+            setIsLoaded(true);
+            setMovies(result.Search);
+          },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
+          (err) => {
+            setIsLoaded(true);
+            setError(err);
+          },
+        );
+    }
   }, [search, year]);
 
   if (error) {
@@ -44,7 +46,10 @@ function MoviesList({ search, year }) {
 
   return (
     <div>
-      { Array.isArray(movies) && movies.map((movie) => <MovieCard key={movie.imdbID} movie={movie} />) }
+      {
+        Array.isArray(movies)
+        && movies.map((movie) => <MovieCard key={movie.imdbID} movie={movie} />)
+      }
     </div>
   );
 }
