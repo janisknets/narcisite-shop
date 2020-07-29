@@ -13,12 +13,12 @@ const MovieCard = (
   },
 ) => (
   <div>
-    <h1>
+    <h2>
       {Title}
       (
       {Type}
       )
-    </h1>
+    </h2>
     <img src={Poster} alt={Title} />
     <div>{Year}</div>
     <a href={`https://www.imdb.com/title/${imdbID}`}>IMDB Link</a>

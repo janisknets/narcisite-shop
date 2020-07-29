@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Box from '../atoms/box';
 
-function Palette() {
+function Palette({ colours }) {
   const [color, setColor] = useState();
-
-  const colours = ['Blue', 'Red', 'Pink', 'Green', 'Magenta', 'White'];
 
   return (
     <>
@@ -25,5 +24,13 @@ function Palette() {
     </>
   );
 }
+
+Palette.propTypes = {
+  colours: PropTypes.arrayOf(PropTypes.string),
+};
+
+Palette.defaultProps = {
+  colours: ['Blue', 'Red', 'Pink', 'Green', 'Magenta', 'White'],
+};
 
 export default Palette;
