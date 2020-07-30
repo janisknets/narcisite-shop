@@ -9,7 +9,7 @@ const YearDropdown = ({ onYearSelect }) => {
     <div>
       <select onChange={onYearSelect}>
         {
-          yearArray.map((curr) => <option value={curr}>{curr}</option>)
+          yearArray.map((curr) => <option key={curr} value={curr}>{curr}</option>)
         }
       </select>
     </div>

@@ -56,7 +56,7 @@ function MoviesList({ search, year }) {
 
 MoviesList.propTypes = {
   search: PropTypes.string,
-  year: PropTypes.number,
+  year: PropTypes.string,
 };
 
 MoviesList.defaultProps = {

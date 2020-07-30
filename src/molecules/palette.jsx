@@ -13,8 +13,9 @@ function Palette({ colours }) {
           {
             colours.map((colour) => (
               <Box
+                key={colour}
                 text={colour}
-                style={{ backgroundColor: colour.toLowerCase() }}
+                color={colour}
                 clickEffect={() => setColor(colour.toLowerCase())}
               />
             ))

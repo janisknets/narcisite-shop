@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-function Box({ style, clickEffect, text }) {
+function Box({ color, clickEffect, text }) {
   return (
-    <button
+    <Button
       type="button"
-      style={style}
+      color={color}
       onClick={() => {
         if (clickEffect) {
           clickEffect();
@@ -13,18 +14,23 @@ function Box({ style, clickEffect, text }) {
       }}
     >
       {text}
-    </button>
+    </Button>
   );
 }
 
+const Button = styled.button`
+  background-color: ${(props) => props.color};
+  text-align: center;
+`;
+
 Box.propTypes = {
-  style: PropTypes.string,
+  color: PropTypes.string,
   clickEffect: PropTypes.func,
   text: PropTypes.string,
 };
 
 Box.defaultProps = {
-  style: null,
+  color: null,
   clickEffect: null,
   text: 'Button',
 };
